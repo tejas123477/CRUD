@@ -1,0 +1,54 @@
+<?php
+
+function printinfo($name,$number)
+{
+    echo  $name;
+    echo $number;
+}
+
+
+$name=$_POST['name'];
+$number=$_POST['number'];
+
+
+function validate_name($name,$number)
+{
+    $namepattern="/^[a-z]+/i";
+    $nametest=preg_match($name,$namepattern);
+    $numberpattern="/^[0-9]+/";
+    $numbertest=preg_match($number,$numberpattern);
+    if($nametest||$numbertest)
+    {
+        printinfo($name,$number);
+    }
+    else
+    {
+        echo "error";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
