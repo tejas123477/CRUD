@@ -1,0 +1,35 @@
+<?php
+
+function sod($num)
+{
+    $rev=0;
+    $c=$num;
+    $sum=0;
+
+    while($num>0)
+    {
+        $r=$num%10;
+        $rev=$rev*10+$r;
+        $num=$num/10;
+        $sum=$sum+$r;
+    }
+
+    echo "sum of digit is".$sum;
+
+    if($c==$num)
+    {
+        echo "it is palindrome";
+    }
+    else
+    {
+       echo "not palindrome";
+    }
+
+    echo "current date".date(d-m-y);
+    echo "current date".date(h-m-sa);
+}
+
+
+$num=$_POST['num'];
+sod($num);
+?>
